@@ -1,0 +1,12 @@
+<% layout('/news/newspaper/boilerplate') -%>
+    <div class="row">
+        <div class="col-6 offset-3 p-0">
+            <h1 class="text-center mb-3"><%= newspaper.title %></h1>
+            <img src="<%= newspaper.image %>" alt="" class="img-fluid thumbnail my-3">
+            <p class="mb-1"><%= newspaper.author %></p>
+            <p><%= newspaper.date %></p>
+            <% for (let i = 0; i < newspaper.text.length; i++) { %>
+                <p><%= newspaper.text[i] %></p>
+            <% } %>
+        </div>
+    </div>
