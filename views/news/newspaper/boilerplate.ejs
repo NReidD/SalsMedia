@@ -11,35 +11,35 @@
 </head>
 <body>
     <section class="heading d-flex align-items-center p-3">
-        <h1 class="mb-0 text-center">Newspaper</h1>
+        <h1 class="mb-0 text-center"><a href="/news/newspaper">Newspaper</a></h1>
         <a href="/news/newspaper/post" class="btn btn-primary">Add Post</a>
     </section>
 
     <nav class="d-flex">
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">World News</p>
-        </section class="news-nav">
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Sports</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'World News' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=World News" class="mb-0">World News</a>
         </section>
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Salesian Scoop</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Sports' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Sports" class="mb-0">Sports</a>
         </section>
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Student Spotlight</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Salesian Scoop' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Salesian Scoop" class="mb-0">Salesian Scoop</a>
         </section>
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Wellness</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Student Spotlight' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Student Spotlight" class="mb-0">Student Spotlight</a>
         </section>
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Entertainment</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Wellness' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Wellness" class="mb-0">Wellness</a>
         </section>
-        <section class="news-nav d-flex justify-content-center align-items-center py-2">
-            <p class="mb-0">Crossword</p>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Entertainment' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Entertainment" class="mb-0">Entertainment</a>
+        </section>
+        <section class="news-nav d-flex justify-content-center align-items-center py-2 <%= category === 'Crossword' ? 'selected' : '' %>">
+            <a href="/news/newspaper?category=Crossword" class="mb-0">Crossword</a>
         </section>
     </nav>
 
-    <main class="my-5">
+    <main class="my-3">
         <%- body -%>
     </main>
 

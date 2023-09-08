@@ -2,10 +2,11 @@
 <div class="d-flex flex-wrap justify-content-center">
     <% for (let i = 0; i < newspapers.length; i++) { %>
         <div class="card m-3">
-            <img src="<%= newspapers[i].image %>" class="card-img-top" alt="..." style="width: 18rem;">
+            <img src="<%= newspapers[i].image %>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title"><%= newspapers[i].title %></h5>
-              <p class="card-text">By <%= newspapers[i].author %></p>
+              <h6 class="card-subtitle mb-1 text-body-secondary"><%= newspapers[i].category %></h6>
+              <h5 class="card-title mb-0"><%= newspapers[i].title %></h5>
+              <p class="card-text mb-2">By <%= newspapers[i].author %></p>
               <a href="/news/newspaper/<%= newspapers[i]._id %>" class="btn btn-primary">Full article</a>
             </div>
           </div>
