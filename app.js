@@ -9,7 +9,7 @@ const newspaperRouter = require('./routers/news/newspaper')
 const announcementsRouter = require('./routers/news/announcements')
 const ejsMate = require('ejs-mate')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/SalsMedia')
+mongoose.connect('mongodb://127.0.0.1:27020/SalsMedia')
     .then(() => {
         console.log('DB CONNECTED')
     })
