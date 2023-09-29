@@ -5,14 +5,14 @@ const splitText = strArr => {
     return strArr[0].split('\r\n')
 }
  
-module.exports.getNewspaper = async (req, res) => {
+module.exports.showOrgs = async (req, res) => {
     const query = req.query.category
     if (query === undefined) {
-        const newspapers = await Newspaper.find().sort({_id: -1}).limit(10)
-        res.render('news/newspaper/index', {newspapers, category: query})
+        const organizations = await Orgs.find().sort({_id: -1}).limit(10)
+        res.render('orgs/index', {organizations, category: query})
     } else {
-        const newspapers = await Newspaper.find({category: query}).sort({_id: -1}).limit(10)
-        res.render('news/newspaper/index', {newspapers, category:  query})
+        const organizations = await Orgs.find({category: query}).sort({_id: -1}).limit(10)
+        res.render('orgs/index', {organizations, category:  query})
     }
 }
 
